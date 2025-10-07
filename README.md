@@ -31,18 +31,5 @@ D:.
 │   style.css
 │
 ├───pert1
-│   │   index.html
-│   │   kontak.html
-│   │   README.MD
-│   │
-│   └───css
-│           style.css
-│
 └───pert2
-    │   index.html
-    │   README.md
-    │   subtitles.vtt
-    │
-    └───vid
-            video-radit.mp4
 ```
