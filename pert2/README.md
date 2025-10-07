@@ -26,11 +26,11 @@ Proyek ini merupakan tugas praktikum berupa **halaman web sederhana** yang menye
 
 ```
 D:.
-│   index.html
-│   README.md
-│   subtitles.vtt
-│   
-└───vid
+|   index.html
+|   README.md
+|   subtitles.vtt
+|
+\---vid
         video-radit.mp4
 ```
 
