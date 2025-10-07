@@ -25,8 +25,13 @@ Proyek ini merupakan tugas praktikum berupa **halaman web sederhana** yang menye
 ## 🗂️ Struktur File
 
 ```
-.
-├── index.html   # Halaman utama (Formulir Pengiriman Resep)
+D:.
+│   index.html
+│   README.md
+│   subtitles.vtt
+│   
+└───vid
+        video-radit.mp4
 ```
 
 ---
