@@ -26,10 +26,11 @@ Akses dokumentasi lengkap secara online di:
 
 ```
 D:.
-│   index.html
-│   README.md
-│   style.css
-│
-├───pert1
-└───pert2
++---.github
+|   \---workflows
++---css
++---pert1
+|   \---css
+\---pert2
+    \---vid
 ```
