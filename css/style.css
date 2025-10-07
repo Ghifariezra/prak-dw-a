@@ -1,0 +1,36 @@
+body {
+	font-family: Arial, sans-serif;
+	max-width: 900px;
+	margin: 2rem auto;
+	line-height: 1.6;
+	padding: 0 1rem;
+}
+
+h1 {
+	color: #2c3e50;
+}
+
+a {
+	color: #2980b9;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	margin-top: 0.5rem;
+}
+
+.card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 1rem;
+	margin: 1rem 0;
+	transition: box-shadow 0.3s;
+}
+
+.card:hover {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
