@@ -1,0 +1,126 @@
+*, *::before *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffff ;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+h1, h2, h3 {
+    width: 100%;
+    text-align: center ;
+    margin-bottom: 1.5rem;
+}
+
+form, article {
+    background-color:rgb(66, 66, 66) ;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 5px solid #ddd;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[list],
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+summary{
+    background-color: #666666;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+summary:hover{
+    background-color: #333333;
+    cursor: pointer;
+}
+.bry{
+    background-color: #666666;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;   
+}
+
+.divider-custom {
+  margin: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider-custom-line {
+  width: 150px;
+  height: 0.25rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.divider-custom-icon {
+  color: #ffffff !important;
+  font-size: 2rem;
+  font-family: 'Font Awesome 6 Free' !important;
+  margin: 0 1rem;
+}
+
+.picture-container {
+    text-align: center;
+}
+
+.picture-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.video-container {
+text-align: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 600px;
+}

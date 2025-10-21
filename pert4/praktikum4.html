@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2d9b6efce.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/html5.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS | praktikum4</title>
+</head>
+<body>
+    <h1>Formulir Pengiriman Resep Baru</h1>
+            <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+<form action="/submit-recipe" method="post">
+    <fieldset>
+        <legend>Informasi Dasar Resep</legend>
+        <p>
+            <label for="recipe-name">Nama Bahasa:</label><br>
+            <input type="text" id="recipe-name" placeholder="Masukkan Nama Resep" name="recipe_name" required maxlength="80">
+        </p>
+        <p>
+            <label for="prep-time">Waktu Persiapan (menit):</label><br>
+            <input type="number" id="prep-time" name="prep_time" min="5" placeholder="Contoh: 45">
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Detail Tambahan</legend>
+        <p>
+            <label for="difficulty">Tingkat Kesulitan (1-5):</label><br>
+            <input type="range" id="difficulty" name="difficulty" min="1" max="5" step="1">
+        </p>
+        <p>
+            <label for="recipe-category">Kategori Resep:</label><br>
+            <input list="categories" placeholder="Kategori Resep" name="recipe_category">
+            <datalist id="categories">
+                <option value="Makanan Pembuka"></option>
+                <option value="Makanan Utama"></option>
+                <option value="Hidangan Penutup"></option>
+                <option value="Minuman"></option>
+            </datalist>
+        </p>
+    </fieldset>
+
+    <button type="submit">Kirim Resep</button>
+</form>
+
+<h1>Pratinjau Halaman Resep</h1>
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+<article>
+    <header>
+        <h1>CSS</h1>
+    </header>  
+    <div class="picture-container">
+    <figure>
+        <img src="assets/html5.jpg" alt="Gambar hidangan utama resep" width="600">
+        <figcaption>HTML & CSS.</figcaption>
+    </figure>
+    </div>
+
+    <p>
+CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mendeskripsikan tampilan dokumen web, memisahkan struktur konten (HTML) dari presentasi visualnya. Fungsinya untuk mengatur gaya seperti warna, font, tata letak, dan spasi, sehingga membuat website terlihat menarik dan konsisten di berbagai perangkat
+    </p>
+
+    <details>
+        <summary>Tampilkan Informasi Gizi</summary>
+        <ul class="bry">
+            <li>Kalori: 350kcal</li>
+            <li>Protein: 20g</li>
+            <li>Karbohidrat: 30g</li>
+        </ul>
+    </details>
+
+    <h3>Video Tutorial</h3>
+    <div class="video-container">
+    <video controls width="600">
+        <source src="assets/01 praktikum dasar dasar html.mp4" type="video/mp4">
+        Maaf, browser Anda tidak mendukung pemutaran video.
+        <track
+            label="Bahasa Indonesia"
+            kind="subtitles"
+            srclang="id"
+            src="subtitles.vtt"
+            default>
+    </video>
+    </div>
+
+    <footer>
+        <div class="video-container">
+        <p>Tingkat Kesulitan: <meter min="0" max="5" value="3" title="3 dari 5">Sedang</meter></p>
+        </div>
+    </footer>
+
+</article>
+</body>
+</html>
