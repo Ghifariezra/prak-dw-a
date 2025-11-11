@@ -1,0 +1,203 @@
+/* --- GLOBAL RESET & FONDASI --- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* MENJADI INI: */
+html {
+  font-size: 100%; /* Setara dengan 16px default browser */
+}
+
+body {
+  font-family: 'Segoe UI', ...;
+  line-height: 1.6rem; 
+  ...
+}
+
+
+/* MENJADI INI: */
+.main-container {
+  ...
+  display: grid;
+  /* Min: 1.5rem, Preferred: 4vw, Max: 3rem */
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* --- LAYOUT UTAMA (MOBILE FIRST) --- */
+.main-container {
+  /* ... (styling dari langkah 1) ... */
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 kolom untuk mobile */
+  gap: 2rem; /* Jarak antar form dan pratinjau */
+}
+
+/* MENJADI INI: */
+h1, h2 {
+  font-size: clamp(2rem, 1rem + 5vw, 3.5rem);
+  text-align: center;
+  line-height: 1.3;
+}
+
+form, article {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- STYLING FORMULIR --- */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[list],
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* --- MEDIA QUERIES UNTUK RESPONSIVENESS --- */
+
+/* Tampilan Desktop (lebar 992px atau lebih) */
+@media (min-width: 992px) {
+  .main-container {
+    /* Ubah layout utama menjadi 2 kolom */
+    /* Kolom pertama (form) lebarnya 1 bagian, kolom kedua (pratinjau) lebarnya 1.5 bagian */
+    grid-template-columns: 1fr 1.5fr; 
+  }
+}
+
+/* --- STYLING TOMBOL & INTERAKTIVITAS --- */
+button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #e67e22; /* Warna Aksen */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #d35400; /* Aksen Gelap */
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #e67e22; /* Warna Aksen */
+  box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
+}
+
+article img, article video {
+  /* 1. Dasar Responsif: tidak akan lebih lebar dari parentnya */
+  
+  /* 2. (Opsional) Trik Pro: Menjaga rasio aspek */
+  /* Jika Anda ingin semua gambar memiliki rasio 16:9 */
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+  border-radius: 4px;
+}
+
+
+meter {
+  width: 200px;
+  height: 20px;
+  background-color: lightgray;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+summary {
+    position: 
+    width: 100%;
+    padding: 16px;
+    background: #f2f2f2;
+    border-radius: 8px;
+    cursor: pointer;
+    font-style: bold;
+}
+.card-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 48px;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #F54927; */
+    border-radius: 8px;
+    background: #f2f2f2;
+    /* list-style: none; */
+    margin: 0;
+}
+.card-summary li {
+    margin: 0;
+    padding: 0;
+}
+
+.bbh-sans-bartle-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#inspirasi-resep {
+  padding: 50px;
+}
+
+#resep-container {
+    display: grid;
+    /* Gunakan CSS Grid untuk membuat layout kartu yang responsif */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.kartu-resep {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden; /* Agar gambar tidak keluar dari radius */
+}
+
+.kartu-resep img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.kartu-resep h3 {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
